@@ -1,0 +1,25 @@
+---
+# tasks file for r_configure_firewall
+  - block:
+    - name: "install needed packages"
+      package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - firewalld
+
+    - name: "check needed service"
+      service:
+        name: "{{ item }}"
+        state: started
+        enabled: yes
+      loop:
+        - firewalld
+
+    rescue:
+    - fail:
+        msg: "configure firewall failed"
+
+    tags:
+    - configure_firewall
+
