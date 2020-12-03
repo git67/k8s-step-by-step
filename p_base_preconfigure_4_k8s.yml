@@ -6,7 +6,7 @@
   any_errors_fatal: true
   become: yes
   vars:
-    pl_name: "configure_os"
+    pl_name: "preconfigure_4_k8s"
 
 ################################################
   pre_tasks:
@@ -45,12 +45,6 @@
         name: r_configure_linux_repos.{{ runtime_dist_flag }}
       tags: 
       - configure_linux_repos
-
-    - name: "role configure auto update"
-      include_role:
-        name: r_configure_auto_update.{{ runtime_dist_flag }}
-      tags: 
-      - configure_auto_update
 
     - name: "role update all"
       include_role:
