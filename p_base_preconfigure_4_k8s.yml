@@ -64,12 +64,6 @@
       tags: 
       - probe_services
 
-    - name: "role configure sshd service"
-      include_role:
-        name: r_configure_sshd
-      tags: 
-      - configure_sshd
-
     - name: "role configure firewall"
       include_role:
         name: r_configure_firewall.{{ runtime_dist_flag }}
@@ -81,12 +75,6 @@
         name: r_configure_selinux
       tags: 
       - configure_selinux
-
-    - name: "role configure hostsfile"
-      include_role:
-        name: r_configure_hosts_file
-      tags: 
-      - configure_hosts_file
 
     rescue:
     - fail:

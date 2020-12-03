@@ -3,11 +3,6 @@
 
 firewall_port_based:
   port1:
-    port: 6443,2379,2380,10250,10251,10255,10255
-    zone: public
-
-firewall_svc_based:
-  svc1:
-    service: sshd
+    port: ["179","443","2379","2380","6443","8285","8472","10250","10251","10255","10255","30000-32767"]
     zone: public
 

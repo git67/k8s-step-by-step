@@ -24,6 +24,13 @@
         immediate: yes
       loop: "{{ firewall_port_based.port1.port }}"
 
+    - name: "configure firewalld masqerade"
+      firewalld:
+        masquerade: "yes"
+        permanent: true
+        state: enabled
+        zone: public
+
     rescue:
     - fail:
         msg: "configure firewall failed"
