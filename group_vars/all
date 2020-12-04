@@ -1,6 +1,6 @@
 # default setting for os-depend roles
 # rh-7: centos 7.x/rhel 7.x
-runtime_dist_flag: "rh-7"
+runtime_dist_flag: "rh-8"
 # usage:
 # "*" -> all repos
 # "*docker*" -> all docker repos
@@ -10,4 +10,4 @@ runtime_dist_flag: "rh-7"
 repo_pattern: "*"
 #
 #
-bybass_failed_service: "yes"
+bybass_failed_service: "no"

@@ -14,21 +14,24 @@
     - name: "role check availibility"
       include_role:
         name: r_check_availability
+      tags:
+      - always
 
     - name: "role check node os 4 rhel"
       include_role:
         name: r_check_4_rhel
+      tags:
+      - always
 
     - name: "role create local facts"
       include_role:
         name: r_create_local_facts
+      tags:
+      - always
 
     rescue:
     - fail:
         msg: "pre tasks {{ pl_name }} failed"
-
-    tags:
-    - always
 
 ################################################
   tasks:

@@ -30,6 +30,7 @@
         permanent: true
         state: enabled
         zone: public
+        immediate: yes
 
     rescue:
     - fail:
