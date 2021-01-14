@@ -16,13 +16,23 @@
       loop:
         - firewalld
 
-    - name: "configure firewalld"
+    - name: "configure firewalld - ports"
       firewalld:
-        port: "{{ item }}/tcp"
+        zone: "{{ item.value.zone }}"
+        port: "{{ item.value.port }}/tcp"
         permanent: true
         state: enabled
         immediate: yes
-      loop: "{{ firewall_port_based.port1.port }}"
+      loop: "{{ firewall_port_based | dict2items}}"
+
+    - name: "configure firewalld - services"
+      firewalld:
+        zone: "{{ item.value.zone }}"
+        service: "{{ item.value.service }}"
+        permanent: true
+        state: enabled
+        immediate: yes
+      loop: "{{ firewall_svc_based | dict2items}}"
 
     - name: "configure firewalld masqerade"
       firewalld:
