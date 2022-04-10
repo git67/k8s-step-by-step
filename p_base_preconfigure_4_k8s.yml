@@ -19,7 +19,7 @@
 
     - name: "role check node os 4 rhel"
       include_role:
-        name: r_check_4_rhel
+        name: r_check_os
       tags:
       - always
 

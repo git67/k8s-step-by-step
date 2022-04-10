@@ -6,7 +6,7 @@ k8s-m3
 [nodes]
 k8s-n1
 k8s-n2
-k8s-n3
+#k8s-n3
 
 [cluster:children]
 master

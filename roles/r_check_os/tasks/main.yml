@@ -1,0 +1,34 @@
+---
+# tasks file for r_check_4_rhel
+# get facts
+  - block:
+    - name: "reload facts"
+      ansible.builtin.setup:
+#        gather_subset:
+#          - '!all'
+#          - '!any'
+#          - facter
+
+    - name: "list installed os"
+      ansible.builtin.debug:
+        msg: "{{ ansible_host }} : {{ ansible_distribution }}"
+
+    - name: "probe for supported os"
+      ansible.builtin.fail:
+        msg: "{{ ansible_host }} doesn't run redhat/centos/ubuntu"
+      when: ('centos' not in ansible_distribution|lower and 'redhat' not in ansible_distribution|lower and 'ubuntu' not in ansible_distribution|lower)
+
+    - name: "set runtime distribution flag" 
+      ansible.builtin.set_fact:
+        runtime_dist_flag: "{{ ansible_distribution|lower }}-{{ ansible_distribution_major_version }}"
+
+    - name: "display runtime distribution flag"
+      ansible.builtin.debug:
+        msg: "{{ ansible_host }}:{{ runtime_dist_flag }}"
+      
+    rescue:
+    - ansible.builtin.fail:
+        msg: "error: during check 4 rhel"
+
+    tags:
+    - always
