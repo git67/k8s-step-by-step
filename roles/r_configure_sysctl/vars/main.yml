@@ -1,8 +1,0 @@
----
-# vars file for r_configure_sysctl
-
-sysctl:
-  entry1:
-    name: "net.brigde.bridge-nf-call-iptables"
-    value: "1"
-    state: "present"
