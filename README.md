@@ -20,7 +20,7 @@ alias
 #### create ansible environment at managed nodes 
 ###### (keep in mind, you have to know the initial root password of your managed nodes)
 ```
-_ri p_configure_ansible.yml
+_ri p_configure_linux.yml
 ```
 
 #### now you can work complete interaktivly
