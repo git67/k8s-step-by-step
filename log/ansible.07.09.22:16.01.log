@@ -1,0 +1,7 @@
+2022-09-07 16:02:01,344 p=3410 u=ansible n=ansible | PLAY [configure ansible client at [k8s-m1, k8s-m2, k8s-m3, k8s-n1, k8s-n2]] ********************************************************************************
+2022-09-07 16:02:01,356 p=3410 u=ansible n=ansible | TASK [role check availibility] *****************************************************************************************************************************
+2022-09-07 16:02:01,356 p=3410 u=ansible n=ansible | Mittwoch 07 September 2022  16:02:01 +0200 (0:00:00.026)       0:00:00.026 **** 
+2022-09-07 16:02:01,403 p=3410 u=ansible n=ansible | TASK [linux.common.r_check_availability : check availibility [k8s-m1, k8s-m2, k8s-m3, k8s-n1, k8s-n2]] *****************************************************
+2022-09-07 16:02:01,404 p=3410 u=ansible n=ansible | Mittwoch 07 September 2022  16:02:01 +0200 (0:00:00.047)       0:00:00.074 **** 
+2022-09-07 16:02:17,263 p=3410 u=ansible n=ansible |  [ERROR]: User interrupted execution
+

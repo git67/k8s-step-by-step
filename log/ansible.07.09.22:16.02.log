@@ -1,0 +1,127 @@
+2022-09-07 16:02:31,035 p=3484 u=ansible n=ansible | ansible-playbook [core 2.12.5]
+  config file = /home/ansible/tools/ansible/k8s-step-by-step/ansible.cfg
+  configured module search path = ['/home/ansible/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/ansible/tools/ansible/.va/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/ansible/tools/ansible/k8s-step-by-step/collections:/home/ansible/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/ansible/tools/ansible/.va/bin/ansible-playbook
+  python version = 3.8.10 (default, Jun 22 2022, 20:18:18) [GCC 9.4.0]
+  jinja version = 2.11.3
+  libyaml = True
+2022-09-07 16:02:31,036 p=3484 u=ansible n=ansible | Using /home/ansible/tools/ansible/k8s-step-by-step/ansible.cfg as config file
+2022-09-07 16:02:33,798 p=3484 u=ansible n=ansible | host_list declined parsing /home/ansible/tools/ansible/k8s-step-by-step/inventories/hosts as it did not pass its verify_file() method
+2022-09-07 16:02:33,798 p=3484 u=ansible n=ansible | script declined parsing /home/ansible/tools/ansible/k8s-step-by-step/inventories/hosts as it did not pass its verify_file() method
+2022-09-07 16:02:33,798 p=3484 u=ansible n=ansible | auto declined parsing /home/ansible/tools/ansible/k8s-step-by-step/inventories/hosts as it did not pass its verify_file() method
+2022-09-07 16:02:33,800 p=3484 u=ansible n=ansible | Parsed /home/ansible/tools/ansible/k8s-step-by-step/inventories/hosts inventory source with ini plugin
+2022-09-07 16:02:33,858 p=3484 u=ansible n=ansible | redirecting (type: callback) ansible.builtin.profile_tasks to ansible.posix.profile_tasks
+2022-09-07 16:02:33,859 p=3484 u=ansible n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2022-09-07 16:02:33,859 p=3484 u=ansible n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2022-09-07 16:02:33,860 p=3484 u=ansible n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2022-09-07 16:02:33,860 p=3484 u=ansible n=ansible | PLAYBOOK: p_configure_linux.yml ****************************************************************************************************************************
+2022-09-07 16:02:33,860 p=3484 u=ansible n=ansible | 1 plays in p_configure_linux.yml
+2022-09-07 16:02:33,870 p=3484 u=ansible n=ansible | PLAY [configure ansible client at [k8s-m1, k8s-m2, k8s-m3, k8s-n1, k8s-n2]] ********************************************************************************
+2022-09-07 16:02:33,876 p=3484 u=ansible n=ansible | TASK [role check availibility] *****************************************************************************************************************************
+2022-09-07 16:02:33,876 p=3484 u=ansible n=ansible | Mittwoch 07 September 2022  16:02:33 +0200 (0:00:00.016)       0:00:00.016 **** 
+2022-09-07 16:02:33,913 p=3484 u=ansible n=ansible | TASK [linux.common.r_check_availability : check availibility [k8s-m1, k8s-m2, k8s-m3, k8s-n1, k8s-n2]] *****************************************************
+2022-09-07 16:02:33,913 p=3484 u=ansible n=ansible | Mittwoch 07 September 2022  16:02:33 +0200 (0:00:00.037)       0:00:00.054 **** 
+2022-09-07 16:02:43,929 p=3504 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:43,933 p=3504 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d18', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-m1']
+2022-09-07 16:02:43,937 p=3505 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:43,938 p=3504 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:43,938 p=3504 u=ansible n=ansible | <k8s-m1> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:43,939 p=3504 u=ansible n=ansible | <k8s-m1> SSH: EXEC sshpass -d21 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-m1 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:43,942 p=3506 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:43,943 p=3505 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d16', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-m2']
+2022-09-07 16:02:43,945 p=3507 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:43,948 p=3506 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d15', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-m3']
+2022-09-07 16:02:43,948 p=3505 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:43,949 p=3508 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:43,950 p=3505 u=ansible n=ansible | <k8s-m2> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:43,951 p=3505 u=ansible n=ansible | <k8s-m2> SSH: EXEC sshpass -d21 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-m2 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:43,952 p=3508 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d19', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-n2']
+2022-09-07 16:02:43,954 p=3507 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d17', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-n1']
+2022-09-07 16:02:43,959 p=3507 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:43,959 p=3507 u=ansible n=ansible | <k8s-n1> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:43,960 p=3507 u=ansible n=ansible | <k8s-n1> SSH: EXEC sshpass -d21 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-n1 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:43,963 p=3506 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:43,963 p=3506 u=ansible n=ansible | <k8s-m3> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:43,963 p=3506 u=ansible n=ansible | <k8s-m3> SSH: EXEC sshpass -d21 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-m3 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:43,965 p=3508 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:43,966 p=3508 u=ansible n=ansible | <k8s-n2> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:43,966 p=3508 u=ansible n=ansible | <k8s-n2> SSH: EXEC sshpass -d21 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-n2 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:46,076 p=3505 u=ansible n=ansible | <k8s-m2> (5, b'', b"Warning: Permanently added 'k8s-m2,192.168.56.62' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.\r\n")
+2022-09-07 16:02:46,078 p=3506 u=ansible n=ansible | <k8s-m3> (5, b'', b"Warning: Permanently added 'k8s-m3,192.168.56.63' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.\r\n")
+2022-09-07 16:02:46,080 p=3507 u=ansible n=ansible | <k8s-n1> (5, b'', b"Warning: Permanently added 'k8s-n1,192.168.56.51' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.\r\n")
+2022-09-07 16:02:46,083 p=3508 u=ansible n=ansible | <k8s-n2> (5, b'', b"Warning: Permanently added 'k8s-n2,192.168.56.52' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.\r\n")
+2022-09-07 16:02:46,278 p=3504 u=ansible n=ansible | <k8s-m1> (5, b'', b"Warning: Permanently added 'k8s-m1,192.168.56.61' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.\r\n")
+2022-09-07 16:02:47,077 p=3505 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:47,078 p=3505 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d21', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-m2']
+2022-09-07 16:02:47,079 p=3506 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:47,079 p=3506 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d21', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-m3']
+2022-09-07 16:02:47,081 p=3507 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:47,082 p=3507 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d21', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-n1']
+2022-09-07 16:02:47,085 p=3508 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:47,086 p=3508 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d21', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-n2']
+2022-09-07 16:02:47,087 p=3506 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:47,087 p=3506 u=ansible n=ansible | <k8s-m3> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:47,088 p=3506 u=ansible n=ansible | <k8s-m3> SSH: EXEC sshpass -d23 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-m3 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:47,090 p=3505 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:47,091 p=3505 u=ansible n=ansible | <k8s-m2> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:47,091 p=3505 u=ansible n=ansible | <k8s-m2> SSH: EXEC sshpass -d23 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-m2 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:47,096 p=3508 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:47,096 p=3508 u=ansible n=ansible | <k8s-n2> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:47,096 p=3508 u=ansible n=ansible | <k8s-n2> SSH: EXEC sshpass -d23 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-n2 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:47,098 p=3507 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:47,098 p=3507 u=ansible n=ansible | <k8s-n1> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:47,098 p=3507 u=ansible n=ansible | <k8s-n1> SSH: EXEC sshpass -d23 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-n1 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:47,279 p=3504 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:47,280 p=3504 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d21', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-m1']
+2022-09-07 16:02:47,286 p=3504 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:47,286 p=3504 u=ansible n=ansible | <k8s-m1> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:47,287 p=3504 u=ansible n=ansible | <k8s-m1> SSH: EXEC sshpass -d23 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-m1 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:51,272 p=3506 u=ansible n=ansible | <k8s-m3> (5, b'', b"Warning: Permanently added 'k8s-m3,192.168.56.63' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.\r\n")
+2022-09-07 16:02:51,278 p=3507 u=ansible n=ansible | <k8s-n1> (5, b'', b"Warning: Permanently added 'k8s-n1,192.168.56.51' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.\r\n")
+2022-09-07 16:02:51,279 p=3505 u=ansible n=ansible | <k8s-m2> (5, b'', b"Warning: Permanently added 'k8s-m2,192.168.56.62' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.\r\n")
+2022-09-07 16:02:51,282 p=3508 u=ansible n=ansible | <k8s-n2> (5, b'', b"Warning: Permanently added 'k8s-n2,192.168.56.52' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.\r\n")
+2022-09-07 16:02:51,802 p=3504 u=ansible n=ansible | <k8s-m1> (5, b'', b"Warning: Permanently added 'k8s-m1,192.168.56.61' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.\r\n")
+2022-09-07 16:02:52,275 p=3506 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:52,276 p=3506 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d23', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-m3']
+2022-09-07 16:02:52,280 p=3505 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:52,280 p=3507 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:52,281 p=3505 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d23', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-m2']
+2022-09-07 16:02:52,281 p=3507 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d23', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-n1']
+2022-09-07 16:02:52,283 p=3506 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:52,284 p=3508 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:52,284 p=3508 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d23', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-n2']
+2022-09-07 16:02:52,285 p=3506 u=ansible n=ansible | <k8s-m3> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:52,286 p=3506 u=ansible n=ansible | <k8s-m3> SSH: EXEC sshpass -d25 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-m3 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:52,287 p=3505 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:52,287 p=3505 u=ansible n=ansible | <k8s-m2> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:52,288 p=3505 u=ansible n=ansible | <k8s-m2> SSH: EXEC sshpass -d25 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-m2 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:52,293 p=3508 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:52,293 p=3508 u=ansible n=ansible | <k8s-n2> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:52,294 p=3508 u=ansible n=ansible | <k8s-n2> SSH: EXEC sshpass -d25 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-n2 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:52,295 p=3507 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:52,296 p=3507 u=ansible n=ansible | <k8s-n1> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:52,296 p=3507 u=ansible n=ansible | <k8s-n1> SSH: EXEC sshpass -d25 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-n1 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:52,803 p=3504 u=ansible n=ansible | wait_for_connection: attempting ping module test
+2022-09-07 16:02:52,804 p=3504 u=ansible n=ansible | sending connection check: [b'sshpass', b'-d23', b'ssh', b'-o', b'UserKnownHostsFile=/dev/null', b'-o', b'GSSAPIAuthentication=no', b'-o', b'StrictHostKeyChecking=no', b'-o', b'User="root"', b'-o', b'ConnectTimeout=10', b'-O', b'check', b'k8s-m1']
+2022-09-07 16:02:52,810 p=3504 u=ansible n=ansible | No connection to reset: No ControlPath specified for "-O" command
+
+2022-09-07 16:02:52,810 p=3504 u=ansible n=ansible | <k8s-m1> ESTABLISH SSH CONNECTION FOR USER: root
+2022-09-07 16:02:52,810 p=3504 u=ansible n=ansible | <k8s-m1> SSH: EXEC sshpass -d25 ssh -o UserKnownHostsFile=/dev/null -o GSSAPIAuthentication=no -o StrictHostKeyChecking=no -o 'User="root"' -o ConnectTimeout=10 k8s-m1 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+2022-09-07 16:02:54,408 p=3484 u=ansible n=ansible |  [ERROR]: User interrupted execution
+

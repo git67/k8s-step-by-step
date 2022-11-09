@@ -1,0 +1,211 @@
+2022-09-07 16:07:42,875 p=5102 u=ansible n=ansible | PLAY [configure ansible client at [k8s-m1, k8s-m2, k8s-m3, k8s-n1, k8s-n2]] ********************************************************************************
+2022-09-07 16:07:42,881 p=5102 u=ansible n=ansible | TASK [role check availibility] *****************************************************************************************************************************
+2022-09-07 16:07:42,882 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:42 +0200 (0:00:00.016)       0:00:00.016 **** 
+2022-09-07 16:07:42,923 p=5102 u=ansible n=ansible | TASK [linux.common.r_check_availability : check availibility [k8s-m1, k8s-m2, k8s-m3, k8s-n1, k8s-n2]] *****************************************************
+2022-09-07 16:07:42,924 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:42 +0200 (0:00:00.042)       0:00:00.058 **** 
+2022-09-07 16:07:54,048 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:07:54,060 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:07:54,108 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:07:54,122 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:07:54,126 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:07:54,137 p=5102 u=ansible n=ansible | TASK [role check node os] **********************************************************************************************************************************
+2022-09-07 16:07:54,137 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:54 +0200 (0:00:11.213)       0:00:11.272 **** 
+2022-09-07 16:07:54,185 p=5102 u=ansible n=ansible | TASK [linux.common.r_check_os : gather facts of given hosts] ***********************************************************************************************
+2022-09-07 16:07:54,185 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:54 +0200 (0:00:00.048)       0:00:11.320 **** 
+2022-09-07 16:07:55,582 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:07:55,606 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:07:55,617 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:07:55,635 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:07:55,637 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:07:55,641 p=5102 u=ansible n=ansible | TASK [linux.common.r_check_os : list installed os] *********************************************************************************************************
+2022-09-07 16:07:55,641 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:55 +0200 (0:00:01.455)       0:00:12.775 **** 
+2022-09-07 16:07:55,652 p=5102 u=ansible n=ansible | ok: [k8s-m1] => {
+    "msg": "k8s-m1 : Ubuntu_22"
+}
+2022-09-07 16:07:55,659 p=5102 u=ansible n=ansible | ok: [k8s-m2] => {
+    "msg": "k8s-m2 : Ubuntu_22"
+}
+2022-09-07 16:07:55,670 p=5102 u=ansible n=ansible | ok: [k8s-m3] => {
+    "msg": "k8s-m3 : Ubuntu_22"
+}
+2022-09-07 16:07:55,673 p=5102 u=ansible n=ansible | ok: [k8s-n1] => {
+    "msg": "k8s-n1 : Ubuntu_22"
+}
+2022-09-07 16:07:55,673 p=5102 u=ansible n=ansible | ok: [k8s-n2] => {
+    "msg": "k8s-n2 : Ubuntu_22"
+}
+2022-09-07 16:07:55,677 p=5102 u=ansible n=ansible | TASK [linux.common.r_check_os : list supported os] *********************************************************************************************************
+2022-09-07 16:07:55,677 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:55 +0200 (0:00:00.036)       0:00:12.812 **** 
+2022-09-07 16:07:55,687 p=5102 u=ansible n=ansible | ok: [k8s-m1] => (item=redhat_8) => {
+    "msg": "supported os: redhat_8"
+}
+2022-09-07 16:07:55,690 p=5102 u=ansible n=ansible | ok: [k8s-m1] => (item=ubuntu_20) => {
+    "msg": "supported os: ubuntu_20"
+}
+2022-09-07 16:07:55,693 p=5102 u=ansible n=ansible | ok: [k8s-m1] => (item=ubuntu_21) => {
+    "msg": "supported os: ubuntu_21"
+}
+2022-09-07 16:07:55,694 p=5102 u=ansible n=ansible | ok: [k8s-m1] => (item=ubuntu_22) => {
+    "msg": "supported os: ubuntu_22"
+}
+2022-09-07 16:07:55,699 p=5102 u=ansible n=ansible | TASK [linux.common.r_check_os : set runtime distribution flag for the given hosts] *************************************************************************
+2022-09-07 16:07:55,700 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:55 +0200 (0:00:00.022)       0:00:12.834 **** 
+2022-09-07 16:07:55,711 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:07:55,725 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:07:55,726 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:07:55,728 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:07:55,737 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:07:55,740 p=5102 u=ansible n=ansible | TASK [linux.common.r_check_os : probe for supported os] ****************************************************************************************************
+2022-09-07 16:07:55,740 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:55 +0200 (0:00:00.040)       0:00:12.875 **** 
+2022-09-07 16:07:55,751 p=5102 u=ansible n=ansible | skipping: [k8s-m1]
+2022-09-07 16:07:55,757 p=5102 u=ansible n=ansible | skipping: [k8s-m2]
+2022-09-07 16:07:55,762 p=5102 u=ansible n=ansible | skipping: [k8s-m3]
+2022-09-07 16:07:55,768 p=5102 u=ansible n=ansible | skipping: [k8s-n2]
+2022-09-07 16:07:55,770 p=5102 u=ansible n=ansible | skipping: [k8s-n1]
+2022-09-07 16:07:55,773 p=5102 u=ansible n=ansible | TASK [linux.common.r_check_os : display runtime distribution flag] *****************************************************************************************
+2022-09-07 16:07:55,773 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:55 +0200 (0:00:00.033)       0:00:12.908 **** 
+2022-09-07 16:07:55,787 p=5102 u=ansible n=ansible | ok: [k8s-m1] => {
+    "msg": "k8s-m1:ubuntu_22"
+}
+2022-09-07 16:07:55,793 p=5102 u=ansible n=ansible | ok: [k8s-m2] => {
+    "msg": "k8s-m2:ubuntu_22"
+}
+2022-09-07 16:07:55,799 p=5102 u=ansible n=ansible | ok: [k8s-m3] => {
+    "msg": "k8s-m3:ubuntu_22"
+}
+2022-09-07 16:07:55,806 p=5102 u=ansible n=ansible | ok: [k8s-n2] => {
+    "msg": "k8s-n2:ubuntu_22"
+}
+2022-09-07 16:07:55,807 p=5102 u=ansible n=ansible | ok: [k8s-n1] => {
+    "msg": "k8s-n1:ubuntu_22"
+}
+2022-09-07 16:07:55,820 p=5102 u=ansible n=ansible | TASK [role create local facts] *****************************************************************************************************************************
+2022-09-07 16:07:55,820 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:55 +0200 (0:00:00.046)       0:00:12.955 **** 
+2022-09-07 16:07:55,887 p=5102 u=ansible n=ansible | TASK [linux.common.r_create_local_facts : create directory for local facts if doesn't exists] **************************************************************
+2022-09-07 16:07:55,887 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:55 +0200 (0:00:00.066)       0:00:13.022 **** 
+2022-09-07 16:07:56,836 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:07:56,857 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:07:56,871 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:07:56,873 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:07:56,876 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:07:56,879 p=5102 u=ansible n=ansible | TASK [linux.common.r_create_local_facts : template fact files to /etc/ansible/facts.d] *********************************************************************
+2022-09-07 16:07:56,880 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:56 +0200 (0:00:00.992)       0:00:14.014 **** 
+2022-09-07 16:07:57,860 p=5102 u=ansible n=ansible | ok: [k8s-m1] => (item=/home/ansible/tools/ansible/k8s-step-by-step/collections/ansible_collections/linux/common/roles/r_create_local_facts/templates/t_state.fact.j2)
+2022-09-07 16:07:57,868 p=5102 u=ansible n=ansible | ok: [k8s-n1] => (item=/home/ansible/tools/ansible/k8s-step-by-step/collections/ansible_collections/linux/common/roles/r_create_local_facts/templates/t_state.fact.j2)
+2022-09-07 16:07:57,890 p=5102 u=ansible n=ansible | ok: [k8s-n2] => (item=/home/ansible/tools/ansible/k8s-step-by-step/collections/ansible_collections/linux/common/roles/r_create_local_facts/templates/t_state.fact.j2)
+2022-09-07 16:07:57,892 p=5102 u=ansible n=ansible | ok: [k8s-m2] => (item=/home/ansible/tools/ansible/k8s-step-by-step/collections/ansible_collections/linux/common/roles/r_create_local_facts/templates/t_state.fact.j2)
+2022-09-07 16:07:57,895 p=5102 u=ansible n=ansible | ok: [k8s-m3] => (item=/home/ansible/tools/ansible/k8s-step-by-step/collections/ansible_collections/linux/common/roles/r_create_local_facts/templates/t_state.fact.j2)
+2022-09-07 16:07:57,916 p=5102 u=ansible n=ansible | TASK [role create ansible user] ****************************************************************************************************************************
+2022-09-07 16:07:57,917 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:57 +0200 (0:00:01.037)       0:00:15.051 **** 
+2022-09-07 16:07:57,967 p=5102 u=ansible n=ansible | TASK [linux.bootstrap_ansible_user.r_create_ansible_user : create group ansible:61065] *********************************************************************
+2022-09-07 16:07:57,967 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:57 +0200 (0:00:00.050)       0:00:15.102 **** 
+2022-09-07 16:07:58,932 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:07:58,932 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:07:58,977 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:07:58,982 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:07:58,987 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:07:58,991 p=5102 u=ansible n=ansible | TASK [linux.bootstrap_ansible_user.r_create_ansible_user : create user ansible:61065] **********************************************************************
+2022-09-07 16:07:58,991 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:07:58 +0200 (0:00:01.024)       0:00:16.126 **** 
+2022-09-07 16:08:00,067 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:08:00,078 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:08:00,081 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:08:00,089 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:08:00,095 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:08:00,098 p=5102 u=ansible n=ansible | TASK [linux.bootstrap_ansible_user.r_create_ansible_user : add public key to ~/.ssh/authorized_keys] *******************************************************
+2022-09-07 16:08:00,098 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:00 +0200 (0:00:01.107)       0:00:17.233 **** 
+2022-09-07 16:08:01,112 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:08:01,165 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:08:01,165 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:08:01,172 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:08:01,176 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:08:01,181 p=5102 u=ansible n=ansible | TASK [linux.bootstrap_ansible_user.r_create_ansible_user : create /etc/sudoers.d/ansible] ******************************************************************
+2022-09-07 16:08:01,181 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:01 +0200 (0:00:01.083)       0:00:18.316 **** 
+2022-09-07 16:08:02,032 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:08:02,059 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:08:02,071 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:08:02,094 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:08:02,106 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:08:02,109 p=5102 u=ansible n=ansible | TASK [linux.bootstrap_ansible_user.r_create_ansible_user : add entry ansible ALL=(ALL) NOPASSWD: ALL to  /etc/sudoers.d/ansible] ***************************
+2022-09-07 16:08:02,109 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:02 +0200 (0:00:00.928)       0:00:19.244 **** 
+2022-09-07 16:08:03,007 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:08:03,012 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:08:03,025 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:08:03,035 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:08:03,037 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:08:03,052 p=5102 u=ansible n=ansible | TASK [role update all] *************************************************************************************************************************************
+2022-09-07 16:08:03,052 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:03 +0200 (0:00:00.942)       0:00:20.187 **** 
+2022-09-07 16:08:03,109 p=5102 u=ansible n=ansible | TASK [linux.update.r_update_all_ubuntu_22 : update all packages] *******************************************************************************************
+2022-09-07 16:08:03,109 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:03 +0200 (0:00:00.056)       0:00:20.244 **** 
+2022-09-07 16:08:05,095 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:08:05,131 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:08:05,139 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:08:05,152 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:08:05,164 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:08:05,178 p=5102 u=ansible n=ansible | TASK [role reboot nodes] ***********************************************************************************************************************************
+2022-09-07 16:08:05,178 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:05 +0200 (0:00:02.068)       0:00:22.313 **** 
+2022-09-07 16:08:05,243 p=5102 u=ansible n=ansible | TASK [linux.common.r_reboot_nodes : initiating reboot of managed nodes] ************************************************************************************
+2022-09-07 16:08:05,243 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:05 +0200 (0:00:00.065)       0:00:22.378 **** 
+2022-09-07 16:08:06,318 p=5102 u=ansible n=ansible | changed: [k8s-n1]
+2022-09-07 16:08:06,336 p=5102 u=ansible n=ansible | changed: [k8s-m1]
+2022-09-07 16:08:06,341 p=5102 u=ansible n=ansible | changed: [k8s-m3]
+2022-09-07 16:08:06,348 p=5102 u=ansible n=ansible | changed: [k8s-n2]
+2022-09-07 16:08:06,354 p=5102 u=ansible n=ansible | changed: [k8s-m2]
+2022-09-07 16:08:06,358 p=5102 u=ansible n=ansible | TASK [linux.common.r_reboot_nodes : wait for startup] ******************************************************************************************************
+2022-09-07 16:08:06,358 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:06 +0200 (0:00:01.115)       0:00:23.493 **** 
+2022-09-07 16:08:37,204 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:08:37,266 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:08:37,268 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:08:37,273 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:08:37,276 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:08:37,291 p=5102 u=ansible n=ansible | TASK [role write local state facts] ************************************************************************************************************************
+2022-09-07 16:08:37,291 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:37 +0200 (0:00:30.933)       0:00:54.426 **** 
+2022-09-07 16:08:37,352 p=5102 u=ansible n=ansible | TASK [linux.common.r_write_local_state_facts : set local fact last_run = p_configure_ansible.yml] **********************************************************
+2022-09-07 16:08:37,352 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:37 +0200 (0:00:00.060)       0:00:54.487 **** 
+2022-09-07 16:08:38,309 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:08:38,309 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:08:38,317 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:08:38,321 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:08:38,325 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:08:38,328 p=5102 u=ansible n=ansible | TASK [linux.common.r_write_local_state_facts : set local fact all_run] *************************************************************************************
+2022-09-07 16:08:38,328 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:38 +0200 (0:00:00.976)       0:00:55.463 **** 
+2022-09-07 16:08:39,223 p=5102 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:08:39,252 p=5102 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:08:39,254 p=5102 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:08:39,266 p=5102 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:08:39,270 p=5102 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:08:39,277 p=5102 u=ansible n=ansible | TASK [linux.common.r_write_local_state_facts : set local fact last_deploy = 16:08:39-07.09.2022] ***********************************************************
+2022-09-07 16:08:39,278 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:39 +0200 (0:00:00.948)       0:00:56.412 **** 
+2022-09-07 16:08:40,113 p=5102 u=ansible n=ansible | changed: [k8s-m1]
+2022-09-07 16:08:40,144 p=5102 u=ansible n=ansible | changed: [k8s-n1]
+2022-09-07 16:08:40,148 p=5102 u=ansible n=ansible | changed: [k8s-m2]
+2022-09-07 16:08:40,182 p=5102 u=ansible n=ansible | changed: [k8s-m3]
+2022-09-07 16:08:40,185 p=5102 u=ansible n=ansible | changed: [k8s-n2]
+2022-09-07 16:08:40,199 p=5102 u=ansible n=ansible | PLAY RECAP *************************************************************************************************************************************************
+2022-09-07 16:08:40,200 p=5102 u=ansible n=ansible | k8s-m1                     : ok=19   changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-09-07 16:08:40,200 p=5102 u=ansible n=ansible | k8s-m2                     : ok=18   changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-09-07 16:08:40,200 p=5102 u=ansible n=ansible | k8s-m3                     : ok=18   changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-09-07 16:08:40,200 p=5102 u=ansible n=ansible | k8s-n1                     : ok=18   changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-09-07 16:08:40,200 p=5102 u=ansible n=ansible | k8s-n2                     : ok=18   changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-09-07 16:08:40,200 p=5102 u=ansible n=ansible | Mittwoch 07 September 2022  16:08:40 +0200 (0:00:00.923)       0:00:57.335 **** 
+2022-09-07 16:08:40,201 p=5102 u=ansible n=ansible | =============================================================================== 
+2022-09-07 16:08:40,201 p=5102 u=ansible n=ansible | role check availibility ----------------------------------------------------------------------------------------------------------------------------- 0.04s
+2022-09-07 16:08:40,201 p=5102 u=ansible n=ansible | linux.common.r_check_availability : check availibility [k8s-m1, k8s-m2, k8s-m3, k8s-n1, k8s-n2]
+ --------------------------------------------------- 11.21s
+2022-09-07 16:08:40,201 p=5102 u=ansible n=ansible | role check node os ---------------------------------------------------------------------------------------------------------------------------------- 0.05s
+2022-09-07 16:08:40,201 p=5102 u=ansible n=ansible | linux.common.r_check_os : gather facts of given hosts ----------------------------------------------------------------------------------------------- 1.46s
+2022-09-07 16:08:40,201 p=5102 u=ansible n=ansible | linux.common.r_check_os : list installed os --------------------------------------------------------------------------------------------------------- 0.04s
+2022-09-07 16:08:40,201 p=5102 u=ansible n=ansible | linux.common.r_check_os : list supported os --------------------------------------------------------------------------------------------------------- 0.02s
+2022-09-07 16:08:40,201 p=5102 u=ansible n=ansible | linux.common.r_check_os : set runtime distribution flag for the given hosts ------------------------------------------------------------------------- 0.04s
+2022-09-07 16:08:40,201 p=5102 u=ansible n=ansible | linux.common.r_check_os : probe for supported os ---------------------------------------------------------------------------------------------------- 0.03s
+2022-09-07 16:08:40,201 p=5102 u=ansible n=ansible | linux.common.r_check_os : display runtime distribution flag ----------------------------------------------------------------------------------------- 0.05s
+2022-09-07 16:08:40,202 p=5102 u=ansible n=ansible | role create local facts ----------------------------------------------------------------------------------------------------------------------------- 0.07s
+2022-09-07 16:08:40,202 p=5102 u=ansible n=ansible | linux.common.r_create_local_facts : create directory for local facts if doesn't exists -------------------------------------------------------------- 0.99s
+2022-09-07 16:08:40,202 p=5102 u=ansible n=ansible | linux.common.r_create_local_facts : template fact files to /etc/ansible/facts.d --------------------------------------------------------------------- 1.04s
+2022-09-07 16:08:40,202 p=5102 u=ansible n=ansible | role create ansible user ---------------------------------------------------------------------------------------------------------------------------- 0.05s
+2022-09-07 16:08:40,202 p=5102 u=ansible n=ansible | linux.bootstrap_ansible_user.r_create_ansible_user : create group ansible:61065 --------------------------------------------------------------------- 1.02s
+2022-09-07 16:08:40,202 p=5102 u=ansible n=ansible | linux.bootstrap_ansible_user.r_create_ansible_user : create user ansible:61065 ---------------------------------------------------------------------- 1.11s
+2022-09-07 16:08:40,202 p=5102 u=ansible n=ansible | linux.bootstrap_ansible_user.r_create_ansible_user : add public key to ~/.ssh/authorized_keys ------------------------------------------------------- 1.08s
+2022-09-07 16:08:40,202 p=5102 u=ansible n=ansible | linux.bootstrap_ansible_user.r_create_ansible_user : create /etc/sudoers.d/ansible ------------------------------------------------------------------ 0.93s
+2022-09-07 16:08:40,202 p=5102 u=ansible n=ansible | linux.bootstrap_ansible_user.r_create_ansible_user : add entry ansible ALL=(ALL) NOPASSWD: ALL to  /etc/sudoers.d/ansible --------------------------- 0.94s
+2022-09-07 16:08:40,202 p=5102 u=ansible n=ansible | role update all ------------------------------------------------------------------------------------------------------------------------------------- 0.06s
+2022-09-07 16:08:40,202 p=5102 u=ansible n=ansible | linux.update.r_update_all_ubuntu_22 : update all packages ------------------------------------------------------------------------------------------- 2.07s

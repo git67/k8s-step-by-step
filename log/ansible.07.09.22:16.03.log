@@ -1,0 +1,64 @@
+2022-09-07 16:03:08,249 p=3577 u=ansible n=ansible | PLAY [configure ansible client at [k8s-m1, k8s-m2, k8s-m3, k8s-n1, k8s-n2]] ********************************************************************************
+2022-09-07 16:03:08,256 p=3577 u=ansible n=ansible | TASK [role check availibility] *****************************************************************************************************************************
+2022-09-07 16:03:08,256 p=3577 u=ansible n=ansible | Mittwoch 07 September 2022  16:03:08 +0200 (0:00:00.016)       0:00:00.016 **** 
+2022-09-07 16:03:08,294 p=3577 u=ansible n=ansible | TASK [linux.common.r_check_availability : check availibility [k8s-m1, k8s-m2, k8s-m3, k8s-n1, k8s-n2]] *****************************************************
+2022-09-07 16:03:08,294 p=3577 u=ansible n=ansible | Mittwoch 07 September 2022  16:03:08 +0200 (0:00:00.038)       0:00:00.054 **** 
+2022-09-07 16:03:18,053 p=3577 u=ansible n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-07 16:04:00,812 p=3603 u=ansible n=ansible | PLAY [configure ansible client at [k8s-m1, k8s-m2, k8s-m3, k8s-n1, k8s-n2]] ********************************************************************************
+2022-09-07 16:04:00,818 p=3603 u=ansible n=ansible | TASK [role check availibility] *****************************************************************************************************************************
+2022-09-07 16:04:00,818 p=3603 u=ansible n=ansible | Mittwoch 07 September 2022  16:04:00 +0200 (0:00:00.016)       0:00:00.016 **** 
+2022-09-07 16:04:00,858 p=3603 u=ansible n=ansible | TASK [linux.common.r_check_availability : check availibility [k8s-m1, k8s-m2, k8s-m3, k8s-n1, k8s-n2]] *****************************************************
+2022-09-07 16:04:00,858 p=3603 u=ansible n=ansible | Mittwoch 07 September 2022  16:04:00 +0200 (0:00:00.039)       0:00:00.056 **** 
+2022-09-07 16:04:12,042 p=3603 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:04:12,068 p=3603 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:04:12,084 p=3603 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:04:12,095 p=3603 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:04:12,096 p=3603 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:04:12,107 p=3603 u=ansible n=ansible | TASK [role check node os] **********************************************************************************************************************************
+2022-09-07 16:04:12,107 p=3603 u=ansible n=ansible | Mittwoch 07 September 2022  16:04:12 +0200 (0:00:11.249)       0:00:11.305 **** 
+2022-09-07 16:04:12,157 p=3603 u=ansible n=ansible | TASK [linux.common.r_check_os : gather facts of given hosts] ***********************************************************************************************
+2022-09-07 16:04:12,157 p=3603 u=ansible n=ansible | Mittwoch 07 September 2022  16:04:12 +0200 (0:00:00.049)       0:00:11.355 **** 
+2022-09-07 16:04:13,694 p=3603 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:04:13,710 p=3603 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:04:13,726 p=3603 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:04:13,736 p=3603 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:04:13,738 p=3603 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:04:13,742 p=3603 u=ansible n=ansible | TASK [linux.common.r_check_os : list installed os] *********************************************************************************************************
+2022-09-07 16:04:13,743 p=3603 u=ansible n=ansible | Mittwoch 07 September 2022  16:04:13 +0200 (0:00:01.585)       0:00:12.941 **** 
+2022-09-07 16:04:13,758 p=3603 u=ansible n=ansible | ok: [k8s-m1] => {
+    "msg": "k8s-m1 : Ubuntu_22"
+}
+2022-09-07 16:04:13,765 p=3603 u=ansible n=ansible | ok: [k8s-m2] => {
+    "msg": "k8s-m2 : Ubuntu_22"
+}
+2022-09-07 16:04:13,772 p=3603 u=ansible n=ansible | ok: [k8s-m3] => {
+    "msg": "k8s-m3 : Ubuntu_22"
+}
+2022-09-07 16:04:13,777 p=3603 u=ansible n=ansible | ok: [k8s-n1] => {
+    "msg": "k8s-n1 : Ubuntu_22"
+}
+2022-09-07 16:04:13,782 p=3603 u=ansible n=ansible | ok: [k8s-n2] => {
+    "msg": "k8s-n2 : Ubuntu_22"
+}
+2022-09-07 16:04:13,786 p=3603 u=ansible n=ansible | TASK [linux.common.r_check_os : list supported os] *********************************************************************************************************
+2022-09-07 16:04:13,786 p=3603 u=ansible n=ansible | Mittwoch 07 September 2022  16:04:13 +0200 (0:00:00.043)       0:00:12.984 **** 
+2022-09-07 16:04:13,801 p=3603 u=ansible n=ansible | ok: [k8s-m1] => (item=redhat_8) => {
+    "msg": "supported os: redhat_8"
+}
+2022-09-07 16:04:13,802 p=3603 u=ansible n=ansible | ok: [k8s-m1] => (item=ubuntu_20) => {
+    "msg": "supported os: ubuntu_20"
+}
+2022-09-07 16:04:13,803 p=3603 u=ansible n=ansible | ok: [k8s-m1] => (item=ubuntu_21) => {
+    "msg": "supported os: ubuntu_21"
+}
+2022-09-07 16:04:13,809 p=3603 u=ansible n=ansible | TASK [linux.common.r_check_os : set runtime distribution flag for the given hosts] *************************************************************************
+2022-09-07 16:04:13,809 p=3603 u=ansible n=ansible | Mittwoch 07 September 2022  16:04:13 +0200 (0:00:00.023)       0:00:13.007 **** 
+2022-09-07 16:04:13,823 p=3603 u=ansible n=ansible | ok: [k8s-m1]
+2022-09-07 16:04:13,838 p=3603 u=ansible n=ansible | ok: [k8s-m2]
+2022-09-07 16:04:13,839 p=3603 u=ansible n=ansible | ok: [k8s-m3]
+2022-09-07 16:04:13,846 p=3603 u=ansible n=ansible | ok: [k8s-n1]
+2022-09-07 16:04:13,850 p=3603 u=ansible n=ansible | ok: [k8s-n2]
+2022-09-07 16:04:13,854 p=3603 u=ansible n=ansible | TASK [linux.common.r_check_os : probe for supported os] ****************************************************************************************************
+2022-09-07 16:04:13,855 p=3603 u=ansible n=ansible | Mittwoch 07 September 2022  16:04:13 +0200 (0:00:00.045)       0:00:13.053 **** 
+2022-09-07 16:04:13,874 p=3603 u=ansible n=ansible | fatal: [k8s-m1]: FAILED! => {"changed": false, "msg": "k8s-m1 doesn't run an supported os"}
